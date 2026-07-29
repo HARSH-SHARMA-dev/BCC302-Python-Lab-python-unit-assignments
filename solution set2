@@ -1,0 +1,107 @@
+# ============================================================
+# PROBLEM SET 2 – OPERATORS (All Solutions in One File)
+# ============================================================
+
+# Problem 1: Input two integers and display Addition, Subtraction, Multiplication,
+#           Division, Floor Division, Modulus, and Exponentiation.
+num1 = int(input("Enter first integer: "))
+num2 = int(input("Enter second integer: "))
+print("Addition:", num1 + num2)
+print("Subtraction:", num1 - num2)
+print("Multiplication:", num1 * num2)
+print("Division:", num1 / num2)
+print("Floor Division:", num1 // num2)
+print("Modulus:", num1 % num2)
+print("Exponentiation:", num1 ** num2)
+
+# Problem 2: Take an integer as input. Apply += 10, -= 5, *= 2, /= 3 one by one.
+#            Display the value after each operation.
+num = int(input("Enter an integer: "))
+num += 10
+print("After += 10:", num)
+num -= 5
+print("After -= 5:", num)
+num *= 2
+print("After *= 2:", num)
+num /= 3
+print("After /= 3:", num)
+
+# Problem 3: Input two numbers and check:
+#            equal?, not equal?, first > second?, first <= second?
+num1 = int(input("Enter first number: "))
+num2 = int(input("Enter second number: "))
+print("Are they equal?", num1 == num2)
+print("Are they not equal?", num1 != num2)
+print("Is first greater than second?", num1 > num2)
+print("Is first less than or equal to second?", num1 <= num2)
+
+# Problem 4: Input marks of a student in two subjects.
+#            Print "Pass" if both >= 35.
+#            Print "Eligible for Scholarship" if either >= 90.
+#            Print whether student has not failed using the not operator.
+marks1 = int(input("Enter marks for subject 1: "))
+marks2 = int(input("Enter marks for subject 2: "))
+if marks1 >= 35 and marks2 >= 35:
+    print("Pass")
+else:
+    print("Fail")
+if marks1 >= 90 or marks2 >= 90:
+    print("Eligible for Scholarship")
+# 'not failed' means both marks are >= 35
+print("Has not failed?", not (marks1 < 35 or marks2 < 35))
+
+# Problem 5: Input a sentence and a word. Check whether the word is present
+#            in the sentence using the 'in' operator.
+sentence = input("Enter a sentence: ")
+word = input("Enter a word to search: ")
+print("Word present?", word in sentence)
+
+# Problem 6: Input a sentence and a word. Check whether the word is NOT present
+#            in the sentence using the 'not in' operator.
+sentence = input("Enter a sentence: ")
+word = input("Enter a word to search: ")
+print("Word not present?", word not in sentence)
+
+# Problem 7: Create two variables a and b. Check whether a is b.
+#            Then create c and check whether a is c.
+# (Using lists to clearly show identity vs equality; integers may be interned)
+a = [10, 20]
+b = a          # b points to the same object as a
+c = [10, 20]   # c is a new object with the same content
+print("a is b:", a is b)   # True
+print("a is c:", a is c)   # False
+
+# Problem 8: Using the variables from Problem 7, check a is not b and a is not c.
+#            Explain the output.
+print("a is not b:", a is not b)   # False (they are the same object)
+print("a is not c:", a is not c)   # True  (they are different objects)
+print("Explanation: a and b refer to the same object, so 'a is not b' is False. "
+      "a and c refer to different objects (even though they have the same content), "
+      "so 'a is not c' is True.")
+
+# Problem 9: Input two integers. Display Bitwise AND (&) and Bitwise OR (|).
+num1 = int(input("Enter first integer: "))
+num2 = int(input("Enter second integer: "))
+print("Bitwise AND (&):", num1 & num2)
+print("Bitwise OR (|):", num1 | num2)
+
+# Problem 10: Input an integer. Display Bitwise XOR with another number entered by the user.
+#             Also display Bitwise NOT (~) of the first number.
+num1 = int(input("Enter an integer: "))
+num2 = int(input("Enter another integer for XOR: "))
+print("Bitwise XOR (^):", num1 ^ num2)
+print("Bitwise NOT (~) of first number:", ~num1)
+
+# Problem 11: Input a number. Display result after left shifting by 2 bits (<< 2)
+#             and right shifting by 2 bits (>> 2).
+num = int(input("Enter a number: "))
+print("Left shift by 2 bits (<< 2):", num << 2)
+print("Right shift by 2 bits (>> 2):", num >> 2)
+
+# Problem 12: Input three numbers. Check whether the first number is greater than the second
+#             AND the third number is greater than the first. Display the result.
+num1 = int(input("Enter first number: "))
+num2 = int(input("Enter second number: "))
+num3 = int(input("Enter third number: "))
+result = (num1 > num2) and (num3 > num1)
+print("First > Second AND Third > First:", result)

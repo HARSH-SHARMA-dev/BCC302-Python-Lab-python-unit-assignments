@@ -1,0 +1,79 @@
+# ============================================================
+# PROBLEM SET 1 – VARIABLES (All Solutions in One File)
+# ============================================================
+
+# Problem 1: Create variables to store name, age, city, and salary, then print them.
+name = "Rahul Sharma"
+age = 20
+city = "Delhi"
+salary = 45000.50
+print(name)
+print(age)
+print(city)
+print(salary)
+
+# Problem 2: Swap values of two variables using traditional method and Python's tuple unpacking.
+a = 10
+b = 20
+
+# Traditional method
+temp = a
+a = b
+b = temp
+print("After traditional swap:", a, b)   # 20 10
+
+# Reset
+a = 10
+b = 20
+# Tuple unpacking
+a, b = b, a
+print("After tuple unpacking swap:", a, b)   # 20 10
+
+# Problem 3: Accept two numbers from the user and print their sum.
+num1 = int(input("Enter first number: "))
+num2 = int(input("Enter second number: "))
+print("Sum =", num1 + num2)
+
+# Problem 4: Create variables of int, float, str, bool types and display their data types using type().
+int_var = 100
+float_var = 99.99
+str_var = "Hello Python"
+bool_var = True
+
+print(type(int_var))
+print(type(float_var))
+print(type(str_var))
+print(type(bool_var))
+
+# Problem 5: Create three variables with one statement and print them.
+x, y, z = 5, 10, 15
+print(x, y, z)
+
+# Problem 6: Assign the same value to three variables and verify the result.
+a = b = c = 50
+print(a, b, c)
+print(a == b == c)   # True
+
+# Problem 7: Delete a variable using del and observe the error when trying to access it.
+x = 42
+print("Before deletion:", x)
+del x
+try:
+    print(x)
+except NameError:
+    print("Error: x is not defined (it was deleted).")
+
+# Problem 8: Input age and print: "You are <age> years old."
+age = int(input("Enter your age: "))
+print(f"You are {age} years old.")
+
+# Problem 9: Input first name and last name separately, display full name in a single line.
+first_name = input("Enter first name: ")
+last_name = input("Enter last name: ")
+print("Full name:", first_name + " " + last_name)
+
+# Problem 10: Input employee's name and monthly salary, then display the annual salary.
+emp_name = input("Enter employee's name: ")
+monthly_salary = float(input("Enter monthly salary: "))
+annual_salary = monthly_salary * 12
+print(f"{emp_name}'s annual salary is: {annual_salary}")

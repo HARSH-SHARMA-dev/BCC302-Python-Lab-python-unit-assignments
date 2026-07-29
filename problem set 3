@@ -1,0 +1,130 @@
+# ============================================================
+# PROBLEM SET 3 – NUMERIC DATA TYPES (All Solutions in One File)
+# ============================================================
+
+# Problem 1: Declare one variable of each numerical data type and print their values and data types.
+int_var = 42
+float_var = 3.14159
+complex_var = 2 + 3j
+print("int:", int_var, type(int_var))
+print("float:", float_var, type(float_var))
+print("complex:", complex_var, type(complex_var))
+
+# Problem 2: Input two integers and perform all arithmetic operations.
+num1 = int(input("Enter first integer: "))
+num2 = int(input("Enter second integer: "))
+print("Addition:", num1 + num2)
+print("Subtraction:", num1 - num2)
+print("Multiplication:", num1 * num2)
+print("Division:", num1 / num2)
+print("Floor Division:", num1 // num2)
+print("Modulus:", num1 % num2)
+print("Exponentiation:", num1 ** num2)
+
+# Problem 3: Convert an integer into a float and a complex number.
+num = 25
+print("Original integer:", num, type(num))
+float_num = float(num)
+complex_num = complex(num)
+print("Converted to float:", float_num, type(float_num))
+print("Converted to complex:", complex_num, type(complex_num))
+
+# Problem 4: Create a complex number using both 'a+bj' notation and the complex() function.
+#            Also print the real and imaginary parts of a complex number.
+c1 = 4 + 5j
+c2 = complex(6, -3)
+print("Using a+bj notation:", c1)
+print("Using complex() function:", c2)
+print("Real part of c1:", c1.real)
+print("Imaginary part of c1:", c1.imag)
+print("Real part of c2:", c2.real)
+print("Imaginary part of c2:", c2.imag)
+
+# Problem 5: Calculate the average of three floating-point numbers.
+a = float(input("Enter first float: "))
+b = float(input("Enter second float: "))
+c = float(input("Enter third float: "))
+avg = (a + b + c) / 3
+print("Average:", avg)
+
+# Problem 6: Demonstrate automatic type promotion using int, float, and complex.
+print("int + float ->", type(5 + 2.5))          # float
+print("int + complex ->", type(5 + (2 + 3j)))   # complex
+print("float + complex ->", type(2.5 + (2 + 3j)))  # complex
+print("int + float + complex ->", type(5 + 2.5 + (2 + 3j)))  # complex
+
+# Problem 7: Input an integer, a float, and a complex number, then display their values and data types.
+int_val = int(input("Enter an integer: "))
+float_val = float(input("Enter a float: "))
+complex_val = complex(input("Enter a complex number (e.g., 3+4j): "))
+print("Integer:", int_val, type(int_val))
+print("Float:", float_val, type(float_val))
+print("Complex:", complex_val, type(complex_val))
+
+# Problem 8: Salary calculation program.
+# Basic Salary = 58,750, HRA = 22% of Basic, DA = 15% of Basic, Professional Tax = ₹500.
+# Calculate Gross Salary, Net Salary after deducting Professional Tax.
+# Print all values using formatted print statements.
+# Print the data type of Net Salary. Round Net Salary to two decimal places.
+basic = 58750
+hra = 0.22 * basic
+da = 0.15 * basic
+professional_tax = 500
+gross_salary = basic + hra + da
+net_salary = gross_salary - professional_tax
+net_salary_rounded = round(net_salary, 2)
+
+print("Basic Salary:", basic)
+print("HRA (22%):", hra)
+print("DA (15%):", da)
+print("Professional Tax:", professional_tax)
+print("Gross Salary:", gross_salary)
+print("Net Salary (rounded to 2 decimals):", net_salary_rounded)
+print("Data type of Net Salary:", type(net_salary))
+
+# Problem 9: Create variables A = 245, B = 37, C = -128.75.
+# Calculate A^2 using pow(), find absolute value of C.
+# Print max and min among A, B, and abs(C).
+# Calculate the average of all three numbers (A, B, C).
+# Display every result with appropriate labels.
+A = 245
+B = 37
+C = -128.75
+
+a_squared = pow(A, 2)
+abs_c = abs(C)
+max_val = max(A, B, abs_c)
+min_val = min(A, B, abs_c)
+avg_abc = (A + B + C) / 3   # average of the original three numbers
+
+print("A^2 (using pow):", a_squared)
+print("Absolute value of C:", abs_c)
+print("Maximum among A, B, abs(C):", max_val)
+print("Minimum among A, B, abs(C):", min_val)
+print("Average of A, B, C:", avg_abc)
+
+# Problem 10: Create two complex variables: c1 = 6+9j, c2 = 4-7j.
+# Add them, multiply them, find magnitude (abs) of each.
+# Print data type of each result. Print memory address of both variables.
+c1 = 6 + 9j
+c2 = 4 - 7j
+
+add_result = c1 + c2
+mul_result = c1 * c2
+mag_c1 = abs(c1)
+mag_c2 = abs(c2)
+
+print("c1 + c2 =", add_result, "type:", type(add_result))
+print("c1 * c2 =", mul_result, "type:", type(mul_result))
+print("Magnitude of c1:", mag_c1)
+print("Magnitude of c2:", mag_c2)
+print("Memory address of c1:", id(c1))
+print("Memory address of c2:", id(c2))
+
+# Problem 11: Print the following student profile table.
+print("\nSTUDENT PROFILE")
+print("Name : Rahul Sharma")
+print("Age : 20")
+print("Course : B.Tech")
+print("University : ABC University")
+print("City : Delhi")
